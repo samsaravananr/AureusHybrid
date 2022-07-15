@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="GoogleTest.TS001">
+        <methods>
+          <include name="Test1" invocation-numbers="1"/>
+          <include name="tearDown"/>
+          <include name="SETUP"/>
+        </methods>
+      </class> <!-- GoogleTest.TS001 -->
+      <class name="GoogleTest.TS002">
+        <methods>
+          <include name="TitleTest"/>
+          <include name="SETUP"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- GoogleTest.TS002 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
