@@ -3,6 +3,8 @@ package GoogleTest;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -17,6 +19,8 @@ public class TS001 extends base
 {
 	
 	public String vSearchStat;
+    public static Logger log=LogManager.getLogger(base.class.getName());
+
 	
 	@Test (dataProvider = "SearchData")
 	public void Test1(String gSearch) throws IOException, InterruptedException
@@ -30,7 +34,8 @@ public class TS001 extends base
 		
 		GSP searchpage=new GSP(myD);
 		vSearchStat=searchpage.RestStat().getText();
-		System.out.println("The Result Statistics "+vSearchStat);
+		log.info(vSearchStat);
+		//System.out.println("The Result Statistics "+vSearchStat);
 		searchpage.VideosButton().click();
 		
 		GVP videospage=new GVP(myD);

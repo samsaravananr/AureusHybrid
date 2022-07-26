@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import GooglePOM.GHP;
 import GoogleResource.base;
+import jdk.internal.org.jline.utils.Log;
 
 public class TS002 extends base 
 {
@@ -23,6 +24,7 @@ public class TS002 extends base
 	if (myD.getTitle().contains("Google"))
 	{
 		System.out.println("PASS");
+		
 	}
 	else
 	{
